@@ -1,13 +1,12 @@
-meme_dict = {
-            "CRINGE": "Garip ya da utandırıcı bir şey",
-            "LOL": "Komik bir şeye verilen cevap",
-            }
+import random
 
-word = input("Anlamadığınız bir kelime yazın (hepsini büyük harflerle yazın!): ")
+karakterler = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
-if word in meme_dict.keys():
-    # Kelime eşleşiyorsa ne yapmalıyız?
-    print(meme_dict[word])
-else:
-    # Kelime eşleşmiyorsa ne yapmalıyız?
-    print("Böyle bir kelime yok. Tekrar dene.")
+uzunluk = int(input("Parola uzunlugunu girin: "))
+
+sifre = ""
+
+for i in range(uzunluk):
+    sifre += random.choice(karakterler)
+
+print("Olusturulan parola: ", sifre)
